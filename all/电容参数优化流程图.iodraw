@@ -34,7 +34,7 @@
         <mxCell id="end" value="输出最优电容向量 x&lt;sup&gt;*&lt;/sup&gt; 及指标" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#EAF2F8;strokeColor=#17385F;strokeWidth=2;fontFamily=SimSun;fontSize=21;fontStyle=1;fontColor=#222222;align=center;verticalAlign=middle;" parent="1" vertex="1">
           <mxGeometry x="255" y="1035" width="490" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="no_label" value="否：继续迭代&lt;br&gt;（若带宽过大则重启）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=17;fontColor=#8A5B2C;rotation=270;" parent="1" vertex="1">
+        <mxCell id="no_label" value="否：继续迭代&lt;br&gt;（若带宽过大则重启）" style="text;html=1;strokeColor=none;fillColor=default;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=17;fontColor=#8A5B2C;rotation=270;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-43" y="581" width="180" height="185" as="geometry" />
         </mxCell>
         <mxCell id="e_start_input" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="start" target="input" edge="1">
