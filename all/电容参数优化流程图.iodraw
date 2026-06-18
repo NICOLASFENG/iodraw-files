@@ -1,0 +1,77 @@
+<mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0" version="24.7.17">
+  <diagram id="cap-optimization-flow" name="电容参数优化流程">
+    <mxGraphModel dx="2213" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1160" background="#FDFBF7" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="开&amp;nbsp;始" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#EAF2F8;strokeColor=#17385F;strokeWidth=2;fontFamily=SimSun;fontSize=22;fontStyle=1;fontColor=#222222;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="265" y="35" width="470" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="input" value="输入固定参数 C&lt;sub&gt;1&lt;/sub&gt;、C&lt;sub&gt;5&lt;/sub&gt;、L&lt;sub&gt;1&lt;/sub&gt;–L&lt;sub&gt;5&lt;/sub&gt;，&lt;br&gt;目标频段，变量边界 Ω 与 0.01 pF 量化步长" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F4F8FB;strokeColor=#17385F;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;fontColor=#222222;align=center;verticalAlign=middle;spacing=10;spacingTop=6;spacingBottom=6;" parent="1" vertex="1">
+          <mxGeometry x="110" y="130" width="780" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="seed" value="构建初始种群：种子库（经验值、LC 关系、&lt;br&gt;零点关系）+ 随机候选，裁剪并量化" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F4F8FB;strokeColor=#17385F;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;fontColor=#222222;align=center;verticalAlign=middle;spacing=10;spacingTop=6;spacingBottom=6;" parent="1" vertex="1">
+          <mxGeometry x="110" y="250" width="780" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="coarse" value="粗频率网格评估：&lt;br&gt;MNA → S 参数 → 回波/插入损耗、阻带、谐波、零点" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F4F8FB;strokeColor=#17385F;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;fontColor=#222222;align=center;verticalAlign=middle;spacing=10;spacingTop=6;spacingBottom=6;" parent="1" vertex="1">
+          <mxGeometry x="110" y="370" width="780" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="ga" value="遗传迭代：精英保留 → 锦标赛选择 → 算术交叉&lt;br&gt;→ 退火高斯变异 / 随机重置 → 候选修复" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F4F8FB;strokeColor=#17385F;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;fontColor=#222222;align=center;verticalAlign=middle;spacing=10;spacingTop=6;spacingBottom=6;" parent="1" vertex="1">
+          <mxGeometry x="110" y="490" width="780" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="dense" value="每隔若干代在密集频率网格上&lt;br&gt;复查当前最优候选" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F4F8FB;strokeColor=#17385F;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;fontColor=#222222;align=center;verticalAlign=middle;spacing=10;spacingTop=6;spacingBottom=6;" parent="1" vertex="1">
+          <mxGeometry x="110" y="620" width="780" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="decision" value="密集网格下&lt;br&gt;是否满足全部约束？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF6DF;strokeColor=#9A6A13;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;fontColor=#222222;align=center;verticalAlign=middle;spacing=10;" parent="1" vertex="1">
+          <mxGeometry x="210" y="750" width="580" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="yes_label" value="是" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=18;fontColor=#222222;" parent="1" vertex="1">
+          <mxGeometry x="480" y="878" width="40" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="local" value="局部精炼：在保持可行的邻域内&lt;br&gt;继续优化若干代" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#F4F8FB;strokeColor=#17385F;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;fontColor=#222222;align=center;verticalAlign=middle;spacing=10;spacingTop=6;spacingBottom=6;" parent="1" vertex="1">
+          <mxGeometry x="205" y="920" width="590" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="输出最优电容向量 x&lt;sup&gt;*&lt;/sup&gt; 及指标" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#EAF2F8;strokeColor=#17385F;strokeWidth=2;fontFamily=SimSun;fontSize=21;fontStyle=1;fontColor=#222222;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="255" y="1035" width="490" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="no_label" value="否：继续迭代&lt;br&gt;（若带宽过大则重启）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=17;fontColor=#8A5B2C;rotation=270;" parent="1" vertex="1">
+          <mxGeometry y="590" width="92" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start_input" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="start" target="input" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_input_seed" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="input" target="seed" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_seed_coarse" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="seed" target="coarse" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_coarse_ga" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="coarse" target="ga" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ga_dense" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="ga" target="dense" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dense_decision" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="dense" target="decision" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_decision_local" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="decision" target="local" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_local_end" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="local" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_no_loop" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8A5B2C;strokeWidth=1.4;dashed=1;dashPattern=4 3;endArrow=block;endFill=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="810" as="sourcePoint" />
+            <mxPoint x="110" y="535" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="75" y="810" />
+              <mxPoint x="75" y="535" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
