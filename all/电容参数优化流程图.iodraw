@@ -22,7 +22,7 @@
         <mxCell id="dense" value="每隔若干代在密集频率网格上&lt;br&gt;复查当前最优候选" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;align=center;verticalAlign=middle;spacing=10;spacingTop=6;spacingBottom=6;" parent="1" vertex="1">
           <mxGeometry x="110" y="620" width="780" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="decision" value="密集网格下&lt;br&gt;是否满足全部约束？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;fontColor=#000000;align=center;verticalAlign=middle;spacing=10;" parent="1" vertex="1">
+        <mxCell id="decision" value="密集网格下&lt;br&gt;是否满足全部约束？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;strokeWidth=1.8;fontFamily=SimSun;fontSize=18;fontColor=#ffffff;align=center;verticalAlign=middle;spacing=10;" parent="1" vertex="1">
           <mxGeometry x="210" y="750" width="580" height="120" as="geometry" />
         </mxCell>
         <mxCell id="yes_label" value="是" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=18;fontColor=#222222;" parent="1" vertex="1">
@@ -35,7 +35,7 @@
           <mxGeometry x="255" y="1035" width="490" height="70" as="geometry" />
         </mxCell>
         <mxCell id="no_label" value="否：继续迭代&lt;br&gt;（若带宽过大则重启）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=SimSun;fontSize=17;fontColor=#8A5B2C;rotation=270;" parent="1" vertex="1">
-          <mxGeometry y="590" width="92" height="185" as="geometry" />
+          <mxGeometry x="-43" y="581" width="180" height="185" as="geometry" />
         </mxCell>
         <mxCell id="e_start_input" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2B3A42;strokeWidth=1.4;endArrow=block;endFill=1;" parent="1" source="start" target="input" edge="1">
           <mxGeometry relative="1" as="geometry" />
